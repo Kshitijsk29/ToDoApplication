@@ -13,13 +13,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <CheckBox
+            android:id="@+id/taskCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="This my first task where i am going todo app"
             android:paddingStart="8dp"
             android:buttonTint="@color/colorPrimary"/>
-
-
 
 
     </LinearLayout>
