@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="9dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginHorizontal="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This my first task where i am going todo app"
+            android:paddingStart="8dp"
+            android:buttonTint="@color/colorPrimary"/>
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
