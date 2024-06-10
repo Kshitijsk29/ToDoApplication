@@ -1,7 +1,5 @@
 package com.nextin.todoapplication.Adapter
-
 import android.app.Activity
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,20 +12,10 @@ class RVAdapter (var arrayList: ArrayList<TodoTasks> , var context :Activity)
     :RecyclerView.Adapter<RVAdapter.MyViewHolder>()
 {
 
-    class MyViewHolder(viewItem : View) :RecyclerView.ViewHolder(viewItem){
-
-        val task = viewItem.findViewById<CheckBox>(R.id.taskCheckBox)
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
-            RVAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemsView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.new_task_layout ,parent,false)
+            .inflate(R.layout.each_item_task_layout ,parent,false)
         return MyViewHolder(itemsView)
-    }
-
-    override fun getItemCount(): Int {
-        return arrayList.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
@@ -37,7 +25,16 @@ class RVAdapter (var arrayList: ArrayList<TodoTasks> , var context :Activity)
         holder.task.isChecked = fromIntToBoolean(item.status)
     }
 
-    fun fromIntToBoolean(  value :Int):Boolean{
+    override fun getItemCount(): Int {
+        return arrayList.size
+    }
+
+    class MyViewHolder(viewItem : View) :RecyclerView.ViewHolder(viewItem){
+
+        val task: CheckBox = viewItem.findViewById(R.id.taskCheckBox)
+    }
+
+    private fun fromIntToBoolean(value :Int):Boolean{
         return value != 0
     }
 }

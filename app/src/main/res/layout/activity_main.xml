@@ -5,15 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/tvHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tasks"
+        android:text="@string/tasks"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimary"
         android:layout_margin="10dp"
         android:textSize="35sp"
 
@@ -31,6 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:nestedScrollingEnabled="true"
